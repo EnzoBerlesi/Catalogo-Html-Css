@@ -1,52 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classicos Brasileiros</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+    </style>
 </head>
-<header>
 
-    <div class="botaosidebar"></div>
-    
-    <div class="Titulo"><h1>Clássicos Brasileiros</h1></div>
+<body>
+    <header class="site-header">
+        <div class="header-container">
 
-    <div class="icones da direita">// icone icone icone icone</div>
+            <div class="botaosidebar">
+                <a href="icones/barra-de-menu.png"></a>
+            </div>
 
+            <div class="titulo">
+                <h1 style="font-family: 'Kablammo', cursive; font-size: 2rem; color: #fff;">
+                    Clássicos Brasileiros</h1>
+            </div>
 
-</header>
-<main>
+            <div class="icones-direita">
+                <img src="icones/barra-de-menu.png" alt="Home" class="icon">
+                <img src="icones/vista-lateral-vazia-do-carrinho-de-compras.png" alt="Carrinho" class="icon">
+                <img src="icones/do-utilizador.png" alt="Perfil" class="icon">
+            </div>
+        </div>
+    </header>
 
-    <div class="carrossel-black">
-        <div class="carrosel">
+    <main>
 
+        <div class="carrossel-container">
+            <div class="carrossel">
+                <div class="slide active">
+                    <img src="fotoscarros/Parati.jpg" alt="Carro 1">
+                </div>
+                <div class="slide">
+                    <img src="fotoscarros/PassatVW.jpeg" alt="Carro 2">
+                </div>
+            </div>
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
         </div>
 
         <div class="black">
-
+            <p>Foto do carro na Black Friday</p>
         </div>
-    </div>
+        </div>
 
-    <div class="primeira-linha">
+        <div class="primeira-linha">
+            <p>primeira linha de carros</p>
+        </div>
 
-    </div>
+        <div class="segunda-linha">
+            <div class="primeiro-segunda">
+                <nav></nav>
+            </div>
 
-    <div class="segunda-linha"></div>
+            <div class="segundo-segunda">
 
-</main>
+            </div>
 
-<footer>
-    <div class="texto esquerda">
-        <P>Quem Somos Nós</P> <br>
-        <p>Trabalhe Conosco</p> <br>
-        <p>Contate-nos</p>
-    </div>
+            <div class="terceiro-segunda">
 
-    <div class="logocarro">Logo da Loja</div>
+            </div>
+        </div>
 
-    <div class="social">
-        <h1>Nossas Redes Sociais:</h1>
-        /*icone icone icone*/
-    </div>
-</footer>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <P>Quem Somos Nós</P>
+            <p>Trabalhe Conosco</p>
+            <p>Contate-nos</p>
+        </div>
+
+        <div class="logocarro">
+            <img src="icones/Logo.png" alt="Logo" width="95">
+        </div>
+
+        <div class="redes-sociais">
+            <h1>Nossas Redes Sociais:</h1>
+            <img src="icones/facebook.png" alt="Facebook" class="social-icon">
+            <img src="icones/twitter.png" alt="twitter" class="social-icon">
+            <img src="icones/instagram.png" alt="Instagram" class="social-icon">
+        </div>
+    </footer>
+</body>
+
 </html>
