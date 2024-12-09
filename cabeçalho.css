@@ -12,36 +12,53 @@ body {
 }
 
 /* Header */
-.site-header {
-    background-color: #000;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
+    background-color: #000; /* Fundo preto */
+    color: #fff;
+}
+
+.botaosidebar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.header-container {
+.Titulo h1 {
+    font-family: 'Kablammo', cursive; /* Fonte personalizada */
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+}
+
+.icones.da.direita {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    gap: 1rem; /* Espaçamento entre os ícones */
 }
 
-.botaosidebar .menu-icon {
-    width: 30px;
-    cursor: pointer;
+.icon {
+    width: 30px; /* Tamanho dos ícones */
+    height: 30px;
+    cursor: pointer; /* Cursor em forma de mão */
 }
 
-.icones-direita .icon {
-    width: 25px;
-    margin-left: 1rem;
-    cursor: pointer;
+/* Estilos adicionais se necessário para responsividade */
+@media (max-width: 768px) {
+    .Titulo h1 {
+        font-size: 1.5rem;
+    }
+    .icones.da.direita {
+        gap: 0.5rem;
+    }
 }
+/*end header*/
 
 /* Footer */
 .site-footer {
     background-color: #000;
-    padding: 2rem;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,8 +69,7 @@ body {
 
 .footer-container {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .texto-esquerda p {
@@ -74,3 +90,10 @@ body {
     margin-right: 0.5rem;
     cursor: pointer;
 }
+
+
+
+.texto-esquerda p {
+    margin: 0.5rem 0;
+}
+/*end footer*/

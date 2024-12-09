@@ -90,9 +90,34 @@ header {
     margin-right: 0.5rem;
     cursor: pointer;
 }
+
+
+
+.texto-esquerda p {
+    margin: 0.5rem 0;
+}
 /*end footer*/
 
 
+/*separação da tela main*/
+.main-container {
+    display: flex;
+    flex-direction: column; /* Alinha os filhos verticalmente */
+}
+
+.section-top {
+    height: 40%;
+}
+  
+  .section-middle {
+    height: 30%;
+  }
+  
+  .section-bottom {
+    height: 30%;
+  }
+
+  /*separação da tela main*/
 
 
 .titulo h1 {
@@ -101,6 +126,7 @@ header {
     color: #fff;
 }
 
+/*carrossel*/
 .carrossel-container {
     display: flex;
     justify-content: center;
@@ -145,14 +171,21 @@ header {
 .next {
     right: 10px;
 }
+/*carrossel*/
 
-
-.social-icon {
-    width: 30px;
-    margin: 0 10px;
-    cursor: pointer;
+.carrossel{
+    width: 40%;
 }
 
-.texto-esquerda p {
-    margin: 0.5rem 0;
+
+
+.black{
+    width: 25%;
+}
+
+.section-top{
+    display: flex; /* Torna os itens flexíveis */
+    justify-content: space-between; /* Espaçamento máximo entre os itens */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 40px; /* Espaçamento interno opcional */
 }
