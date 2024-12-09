@@ -1,0 +1,76 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+
+/* Header */
+.site-header {
+    background-color: #000;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botaosidebar .menu-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.icones-direita .icon {
+    width: 25px;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #000;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+    border-top: 2px solid #444;
+}
+
+.footer-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.texto-esquerda p {
+    margin: 0.5rem 0;
+}
+
+.logo-carro img {
+    width: 50px;
+}
+
+.redes-sociais h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-icon {
+    width: 30px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
