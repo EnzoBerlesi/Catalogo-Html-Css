@@ -1,53 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Conta</title>
-    <link rel="stylesheet" href="cabeçalho.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../cabeçalho.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+    </style>
 </head>
+
 <body>
     <header>
         <div class="botaosidebar">
-            <img src="icones/panel-right.png" alt="Menu" class="icon" />
+            <img src="../icones/panel-right.png" alt="Menu" class="icon" />
         </div>
 
         <div class="Titulo">
-            <h1 style="font-family: 'Kablammo', cursive; font-size: 2rem; color: #fff;">
-                Clássicos Brasileiros
-            </h1>
+            <a href="index.html">
+                <h1>Clássicos Brasileiros</h1>
+            </a>
         </div>
 
         <div class="icones da direita">
-            <img src="icones/search.png" alt="Lupa" class="icon">
-            <img src="icones/circle-user.png" alt="Perfil" class="icon" />
-            <img src="icones/shopping-cart.png" alt="Carrinho" class="icon" />
+            <img src="../icones/search.png" alt="Lupa" class="icon">
+            <img src="../icones/circle-user.png" alt="Perfil" class="icon" />
+            <img src="../icones/shopping-cart.png" alt="Carrinho" class="icon" />
         </div>
         </div>
     </header>
 
-    <main>
+        <main>
+            <div class="block-container">
+                <div class="block">
+                    <img src="../fotoscarros/delrey.jpg" alt="Belina">
+                    <form action="#" method="POST">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                        <br>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                        <br>
+                        <button type="submit">Entrar</button>
 
-    </main>
+                        <p>Não tem uma conta ainda? Crie uma aqui!!</p>
+                        <button onclick="window.location.href='criarconta.html'">Cadastrar-se</button>
+                </div>
+            </div>
+        </main>
+
 
     <footer class="site-footer">
+
         <div class="footer-container">
-            <P>Quem Somos Nós</P>
-            <p>Trabalhe Conosco</p>
-            <p>Contate-nos</p>
-        </div>
+            <div class="texto-esquerda">
+                <ul>
+                    <li>
+                        <a href="quemsomosnos.html">
+                            <p>Quem somos nós</p>
+                        </a>
+                    </li>
+                    <li>
+                        <p>Entre em Contato</p>
+                    </li>
+                    <li>
+                        <p>Trabalhe Conosco</p>
+                    </li>
+                </ul>
+            </div>
 
-        <div class="logocarro">
-            <img src="icones/Logo.png" alt="Logo" width="95">
-        </div>
+            <div class="logo-carro">
+                <img src="../icones/logo.png" alt="Logo">
+            </div>
 
-        <div class="redes-sociais">
-            <h1>Nossas Redes Sociais:</h1>
-            <a href="https://www.facebook.com/?locale=pt_BR"><img src="icones/facebook.png" alt="Facebook"
-                    class="social-icon"></a>
-            <a href="https://x.com/?lang=pt-br"><img src="icones/twitter.png" alt="twitter" class="social-icon"></a>
-            <a href="https://www.instagram.com"><img src="icones/instagram.png" alt="Instagram" class="social-icon"></a>
+            <div class="redes-sociais">
+                <h1>Redes Sociais</h1>
+                <div>
+                    <a href="https://www.facebook.com"><img src="../icones/facebook.png" class="social-icon" /></a>
+                    <a href="https://www.instagram.com"><img src="../icones/instagram.png" class="social-icon" /></a>
+                    <a href="https://x.com/?lang=pt-br"><img src="../icones/twitter.png" class="social-icon" /></a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
