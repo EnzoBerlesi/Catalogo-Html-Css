@@ -104,6 +104,32 @@ header {
     margin-right: 0.5rem;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .site-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container {
+        margin-bottom: 1rem;
+    }
+
+    .texto-esquerda {
+        align-items: center;
+    }
+
+    .social-icon {
+        margin-bottom: 0.5rem;
+    }
+}
+
+a {
+    color: inherit; /* Usa a mesma cor do texto ao redor */
+    text-decoration: none; /* Remove o sublinhado */
+    cursor: default; /* Remove o indicador de que é um link */
+}
 /*end footer*/
 
 .block-container {
