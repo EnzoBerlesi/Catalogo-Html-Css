@@ -18,7 +18,9 @@
         </div>
 
         <div class="Titulo">
-            <a href="index.html"><h1>Clássicos Brasileiros</h1></a>
+            <a href="index.html">
+                <h1>Clássicos Brasileiros</h1>
+            </a>
         </div>
 
         <div class="icones-direita">
@@ -45,48 +47,69 @@
                 </div>
 
                 <div class="black">
-                    <a href="descricaocarros/golbx.html"><p><img src="fotoscarros/GolBX.webp" alt="GolBX">GolBx a preço de banana. <br> Corre ver essa oferta
-                        da black!!!</p></a>
-                    <button>Detalhes</button>
+                    <p><img src="fotoscarros/GolBX.webp" alt="GolBX">GolBx a preço de banana. <br> Corre ver essa oferta
+                        da nossa black!!!</p>
+                    <a href="../descricaocarros/golbx.html"><button>Detalhes</button></a>
                 </div>
             </div>
 
 
-            <script>
 
-                const imgs = document.getElementsByClassName("carrossel");
-                const img = document.querySelectorAll(".carrossel .slide")
+            <script>
                 const prevButton = document.querySelector('.prev');
                 const nextButton = document.querySelector('.next');
-        
-                let idx = 0;
-                function carrossell() {
-                    idx++;
-        
-                    if (idx > img.length - 1) {
-                        idx = 0;
-                    }
-        
-                    imgs.style.transform = 'translateX($(-idx * 500) px)';
+                const slides = document.querySelectorAll('.carrossel .slide');
+                let activeIndex = 0;
+                let intervalId;
+            
+                function showSlide(index) {
+                    // Garante que o índice seja válido
+                    activeIndex = (index + slides.length) % slides.length; // O módulo garante a rotação infinita
+            
+                    // Esconde todos os slides
+                    slides.forEach((slide) => {
+                        slide.classList.remove('active');
+                    });
+            
+                    // Exibe o slide ativo
+                    slides[activeIndex].classList.add('active');
                 }
+            
+                function startAutoSlide() {
+                    // Avança automaticamente a cada 3 segundos
+                    intervalId = setInterval(() => {
+                        showSlide(activeIndex + 1);
+                    }, 3000);
+                }
+            
+                function stopAutoSlide() {
+                    clearInterval(intervalId); // Para o avanço automático
+                }
+            
                 prevButton.addEventListener('click', () => {
+                    stopAutoSlide(); // Para o automático ao clicar
                     showSlide(activeIndex - 1); // Vai para o slide anterior
+                    startAutoSlide(); // Reinicia o automático
                 });
-        
+            
                 nextButton.addEventListener('click', () => {
+                    stopAutoSlide(); // Para o automático ao clicar
                     showSlide(activeIndex + 1); // Vai para o próximo slide
+                    startAutoSlide(); // Reinicia o automático
                 });
-        
-        
-                setInterval(carrossel, 1800);
-        
+            
+                // Inicia com o primeiro slide e o avanço automático
+                showSlide(activeIndex);
+                startAutoSlide();
             </script>
+            
+            
 
 
 
             <div class="block-container">
                 <div class="block">
-                    <img src="fotoscarros/Belina.jpg" alt="Belina">
+                    <img src="fotoscarros/Belina.jpeg" alt="Belina">
                     <p>Belina - Ano 1976 <br> Valor: R$8,500</p>
                     <a href="descricaocarros/belina.html"><button>Detalhes</button></a>
                 </div>
@@ -129,17 +152,15 @@
     <footer class="site-footer">
         <div class="footer-container">
             <div class="texto-esquerda">
-                <ul>
-                    <li>
-                        <a href="quemsomosnos.html"><p>Quem somos nós</p></a>
-                    </li>
-                    <li>
-                        <p>Entre em Contato</p>
-                    </li>
-                    <li>
-                        <p>Trabalhe Conosco</p>
-                    </li>
-                </ul>
+                <a href="quemsomosnos.html">
+                    <p>Quem somos nós</p>
+                </a>
+                <a href="https://www.reclameaqui.com.br">
+                    <p>Entre em Contato</p>
+                </a>
+                <a href="https://www.bne.com.br/jobs/bne-tech">
+                    <p>Trabalhe Conosco</p>
+                </a>
             </div>
 
             <div class="logo-carro">

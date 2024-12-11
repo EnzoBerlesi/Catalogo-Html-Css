@@ -125,6 +125,13 @@ header {
     }
 }
 
+a {
+    color: inherit; /* Usa a mesma cor do texto ao redor */
+    text-decoration: none; /* Remove o sublinhado */
+    cursor: default; /* Remove o indicador de que é um link */
+}
+
+
 /* Seções da main (top, middle, bottom) */
 .main-container {
     display: flex;
@@ -139,25 +146,23 @@ header {
     align-items: center;
     padding: 20px;
     width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 .carrossel {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 80%;
+
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    height: 475px;
+    width: 50%;
 }
 
 .carrossel .slide {
-    width: 40%;
-    opacity: 0;
-    display: none;
+    width: 45%;
+    display: none; /* Esconde os slides inativos */
     transition: opacity 0.5s ease-in-out;
-
 }
 
 .carrossel .active {
@@ -166,11 +171,11 @@ header {
 }
 
 .carrossel img {
-    width: 80%;
-    height: auto;
+    margin-left: 100px;
     border-radius: 10px;
     object-fit: cover;
-    max-width: 100%;
+    height: 430px;
+    width: 500px;
 }
 
 .prev, .next {
@@ -184,6 +189,7 @@ header {
     padding: 10px 15px;
     font-size: 1.5rem;
     z-index: 10;
+    margin: 0 15px; /* Evita sobreposição */
 }
 
 .prev {
@@ -194,9 +200,23 @@ header {
     right: 10px;
 }
 
+@media (max-width: 768px) {
+    .carrossel {
+        width: 100%; /* Ajusta o tamanho para telas menores */
+    }
+
+    .carrossel img {
+        width: 100%; /* Garante que a imagem ocupe a largura */
+    }
+}
+
+
 .black {
     width: 35%;
     text-align: center;
+    width: calc(33.33% - 20px);
+    background-color: #000000ce;
+    border-radius: 10px;
 }
 
 .black img {
@@ -208,6 +228,17 @@ header {
 .black p {
     color: #fff;
     font-size: 1.2rem;
+}
+
+.black button {
+    padding: 10px 15px;
+    background-color: #67819e;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
@@ -230,44 +261,48 @@ header {
 
   
 
-
-
+/*carros*/
 .section-middle {
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
+    padding: 50px;
+    margin: 50px 0;
 }
 
 .block-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 .block {
-    width: calc(33.33% - 20px);
-    background-color: #4e4d4ece;
+    width: calc(32% - 20px);
+    background-color: #463c46ce;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     color: white;
-    box-sizing: border-box;
+    margin-bottom: 60px;
 }
 
 .block img {
-    width: 100%;
     border-radius: 8px;
-    max-height: 200px;
+    max-height: 180px;
     object-fit: cover; 
+    width: 100%; /* Ajusta ao tamanho do bloco */
+    transition: transform 0.3s ease; /* Suaviza o efeito de zoom */
+}
+
+.block img:hover {
+    transform: scale(1.07); /* Amplia a imagem em 1.5x */
 }
 
 .block button {
     padding: 10px 15px;
-    background-color: #67819e;
+    background-color: #7f9dc0;
     border: none;
     color: white;
     cursor: pointer;
@@ -277,5 +312,20 @@ header {
 }
 
 .block button:hover {
-    background-color: #5d7c9e;
+    background-color: #364556;
 }
+
+@media (max-width: 768px) {
+    .block {
+        width: calc(50% - 10px); /* Dois blocos por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .block {
+        width: 30%; /* Um bloco por linha */
+    }
+}
+
+
+/*carros*/
