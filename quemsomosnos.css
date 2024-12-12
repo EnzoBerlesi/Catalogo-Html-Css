@@ -1,0 +1,77 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+
+}
+
+.block-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #231e23ce;
+    border-radius: 1px;
+    max-height: 60%;
+    width: 50%;
+}
+
+.block {
+    width: calc(32% - 20px);
+    background-color: #5b4e5bce;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.block2 {
+    background-color: #5b4e5bce;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+}
+
+.block img {
+    border-radius: 8px;
+    max-height: 180px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.block img:hover {
+    transform: scale(1.07);
+}
+
+@media (max-width: 768px) {
+    .block {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .block {
+        width: 100%;
+    }
+}

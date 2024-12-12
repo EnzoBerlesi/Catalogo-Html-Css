@@ -48,8 +48,8 @@ function createFooter() {
         border-top: 2px solid #444;
         position: relative;
         width: 100%;
-        margin-top: auto;
-        min-height: 80px;
+        margin-top: 180px;
+        min-height: 50px;
     }
 
     .footer-container {
