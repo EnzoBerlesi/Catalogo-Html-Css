@@ -1,0 +1,80 @@
+.block-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Reduzido de 20px para 15px */
+    height: 50vh; /* Ajuste para 50% da altura da viewport */
+    margin: 0;
+}
+
+.block {
+    width: calc(33.33% - 15px); /* Reduziu o gap e ajustou a largura */
+    background-color: #4e4d4ece;
+    border-radius: 8px; /* Diminuído para um arredondamento mais suave */
+    padding: 10px; /* Reduziu o padding */
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+}
+
+.block img {
+    width: 100%;
+    border-radius: 6px; /* Ajuste do arredondamento das imagens */
+    max-height: 180px; /* Reduziu a altura máxima da imagem */
+    object-fit: cover;
+}
+
+.block button {
+    padding: 8px 12px; /* Reduziu o padding do botão */
+    background-color: #67819e;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px; /* Ajuste do arredondamento do botão */
+    font-size: 0.9rem; /* Reduziu o tamanho da fonte */
+    margin-top: 8px; /* Diminuído o espaço entre o botão e o conteúdo */
+}
+
+.block button:hover {
+    background-color: #5d7c9e;
+}
+
+.form-container {
+    background-color: #4f4450;
+    padding: 15px 25px; /* Ajuste do padding para ser mais compacto */
+    border-radius: 8px; /* Arredondamento mais suave */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    width: 280px; /* Reduziu a largura do formulário */
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 8px; /* Reduziu o padding nos inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Reduziu o tamanho da fonte */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduziu o gap entre os campos */
+}
+
+a.btn {
+    display: inline-block;
+    padding: 8px 16px; /* Reduziu o padding do botão */
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px; /* Ajuste do tamanho da fonte */
+}
+
+a.btn:hover {
+    background-color: #0056b3;
+}

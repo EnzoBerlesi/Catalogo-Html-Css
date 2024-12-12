@@ -4,10 +4,7 @@ function createHeader() {
 
     // HTML do header
     header.innerHTML = `
-        <div class="botaosidebar">
-            <img src="icones/panel-right.png" alt="Menu" class="icon" />
-        </div>
-
+    
         <div class="Titulo">
             <a href="index.html">
                 <h1>Clássicos Brasileiros</h1>
