@@ -1,5 +1,5 @@
 // footer.js
-function createFooter() {
+function createFooter2() {
     const footer = document.createElement("footer");
 
     // HTML do footer
@@ -19,15 +19,15 @@ function createFooter() {
             </div>
 
             <div class="logo-carro">
-                <img src="icones/logo.png" alt="Logo">
+                <img src="../icones/logo.png" alt="Logo">
             </div>
 
             <div class="redes-sociais">
                 <h1>Redes Sociais</h1>
                 <div>
-                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwin8firxqKKAxVPr5UCHepGG28QFnoECBgQAQ&url=https%3A%2F%2Fwww.facebook.com%2FBancoNacionalDeEmpregos%2F%3Flocale%3Dpt_BR&usg=AOvVaw3rMKgob3nRzNZ557qtVyPT&opi=89978449"><img src="icones/facebook.png" class="social-icon" /></a>
-                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiK3JOayKKKAxXSHLkGHZUgDgMQFnoECCAQAQ&url=https%3A%2F%2Fwww.instagram.com%2Fbneempregos%2F&usg=AOvVaw3cpcGuvjZDCVy5PWmj0sXC&opi=89978449" class="social-icon" /></a>
-                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjNhfblyKKKAxWsELkGHaFtOQwQFnoECBYQAQ&url=https%3A%2F%2Ftwitter.com%2Fbneempregos&usg=AOvVaw3kveaaFaqdXZGVIJOOuXGc&opi=89978449"><img src="icones/twitter.png" class="social-icon" /></a>
+                    <a href="https://www.facebook.com"><img src="../icones/facebook.png" class="social-icon" /></a>
+                    <a href="https://www.instagram.com"><img src="../icones/instagram.png" class="social-icon" /></a>
+                    <a href="https://x.com/?lang=pt-br"><img src="../icones/twitter.png" class="social-icon" /></a>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@ function createFooter() {
     // CSS do footer
     const style = document.createElement("style");
     style.textContent = `
-    .site-footer {
+.site-footer {
     background-color: #000;
     padding: 20px 0;
     display: flex;
@@ -119,4 +119,4 @@ a {
 }
 
 // Executa a criação do footer
-createFooter();
+createFooter2();
