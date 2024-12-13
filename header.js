@@ -13,8 +13,8 @@ function createHeader() {
 
         <div class="icones-direita">
             <img src="icones/search.png" alt="Lupa" class="icon">
-            <a href="login/telalogin.html"><img src="icones/circle-user.png" alt="Perfil" class="icon" /></a>
-            <img src="icones/shopping-cart.png" alt="Carrinho" class="icon" />
+            <a href="login/telalogin.html"><img src="icones/circle-user.png" alt="Perfil" class="icon" /></a> 
+
         </div>
     `;
 

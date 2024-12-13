@@ -7,7 +7,7 @@ function createFooter2() {
     <footer class="site-footer">
         <div class="footer-container">
             <div class="texto-esquerda">
-                <a href="quemsomosnos.html">
+                <a href="../quemsomosnos.html">
                     <p>Quem somos nós</p>
                 </a>
                 <a href="https://www.reclameaqui.com.br">

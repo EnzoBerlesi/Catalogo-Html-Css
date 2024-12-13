@@ -9,10 +9,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
@@ -20,14 +16,13 @@ body {
     font-family: Arial, sans-serif;
     color: #fff;
     background-color: #1a1a1a;
-
 }
 
 .block-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 250px;
     margin-top: 10px;
     background-color: #231e23ce;
     border-radius: 1px;

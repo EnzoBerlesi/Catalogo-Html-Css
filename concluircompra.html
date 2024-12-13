@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concluir Compra</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <div id="carrinho-concluido">
+            <h2>Resumo da Compra</h2>
+            <div id="itens-carrinho">
+                <!-- Itens do carrinho serão inseridos aqui pelo JS -->
+            </div>
+
+            <h3>Total: R$ <span id="total"></span></h3>
+            
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <style>
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+        }
+    </style>
+
+    <script src="concluircompra.js"></script>
+    <script src="../header2.js"></script>
+    <script src="../footer2.js"></script>
+</body>
+
+</html>

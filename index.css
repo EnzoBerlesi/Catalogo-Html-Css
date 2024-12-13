@@ -241,6 +241,10 @@ a {
     margin-top: 10px;
 }
 
+.block button:hover {
+    background-color: #364556;
+}
+
 @media (max-width: 768px) {
     .section-top {
         flex-direction: column;
@@ -329,3 +333,79 @@ a {
 
 
 /*carros*/
+
+/*carrinho */
+
+/* Estilos básicos do carrinho */
+#carrinho-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Começa fora da tela */
+    width: 300px;
+    height: 100%;
+    background-color: #4d3a47;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease; /* Animação suave */
+    z-index: 999; /* Certifique-se de que está acima de outros elementos */
+}
+
+/* Classe para abrir o carrinho */
+#carrinho-lateral.aberto {
+    right: 0;
+}
+
+/* Garantindo visibilidade da imagem do carrinho */
+#carrinho-botao {
+    width: 30px; /* Tamanho da imagem do carrinho */
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000; /* Certifique-se de que está acima da barra lateral */
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+    border: #ffffff;
+}
+
+#finalizar-compra {
+    display: block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#finalizar-compra:hover {
+    background-color: #ffffff;
+    color: #000
+}
+
+
+.item-carrinho img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.remover-item {
+    background-color: #4d3a47;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.remover-item:hover {
+    background-color: #cc0000; /* Cor mais escura ao passar o mouse */
+}
+
