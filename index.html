@@ -21,8 +21,15 @@
         </div>
 
         <div class="icones-direita">
-            <img src="icones/search.png" alt="Lupa" class="icon">
-            <a href="login/telalogin.html"><img src="icones/circle-user.png" alt="Perfil" class="icon" /></a>
+            <div class="search-container">
+                <input type="checkbox" id="toggle-search" hidden>
+                <label for="toggle-search" class="icon-label">
+                    <img src="icones/search.png" alt="Lupa" class="icon">
+                </label>
+                <div class="searchbar">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+            </div>            <a href="login/telalogin.html"><img src="icones/circle-user.png" alt="Perfil" class="icon" /></a>
             <div class="icones-direita">
                 <!-- A imagem do carrinho de compras será o gatilho -->
                 <img src="../icones/shopping-cart.png" alt="Carrinho de Compras" id="carrinho-botao" class="icon" />
@@ -195,6 +202,8 @@
 
     <script src="carrinho.js"></script>
     <script src="compra.js"></script>
+    <script src="main.js" defer></script>
+
 
 
 </body>

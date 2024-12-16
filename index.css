@@ -15,6 +15,7 @@ body {
 }
 
 /* Header */
+/* Estilos gerais do header */
 header {
     display: flex;
     justify-content: space-between;
@@ -22,11 +23,6 @@ header {
     padding: 1rem 2rem;
     background-color: #000;
     color: #fff;
-}
-
-.botaosidebar {
-    display: flex;
-    align-items: center;
 }
 
 .Titulo h1 {
@@ -38,6 +34,7 @@ header {
 
 .icones-direita {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -47,6 +44,37 @@ header {
     cursor: pointer;
 }
 
+/* Estilo para o container da barra de busca */
+.search-container {
+    position: relative;
+}
+
+.searchbar {
+    position: absolute;
+    top: 50%;
+    right: 0; /* Alinha à direita inicialmente */
+    transform: translateY(-50%) translateX(100%); /* Fora da tela à direita */
+    opacity: 0; /* Invisível no estado inicial */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Animação suave */
+}
+
+.searchbar input {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #444;
+}
+
+/* Exibir a barra de busca quando o checkbox for marcado */
+#toggle-search:checked + .icon-label + .searchbar {
+    transform: translateY(-50%) translateX(-20%); /* Move para a esquerda */
+    opacity: 1; /* Visível */
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .Titulo h1 {
         font-size: 1.5rem;
@@ -55,7 +83,12 @@ header {
     .icones-direita {
         gap: 0.5rem;
     }
+
+    .searchbar input {
+        width: 150px;
+    }
 }
+
 
 /* Footer */
 .site-footer {
