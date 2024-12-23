@@ -4,36 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
 </head>
 
 <body>
-
     <main>
-        <div class="main-container">
-            <div class="adicionar">
-                adicionar
-            </div>
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="add">Adicionar</button>
+            <button class="tab-button" data-tab="view">Visualizar</button>
+            <button class="tab-button" data-tab="edit">Editar</button>
+            <button class="tab-button" data-tab="delete">Deletar</button>
+        </nav>
 
-            <div class="vizualizar">
-                <table>
-                    <td>vizualizar</td>
-                </table>
-            </div>
+        <section id="add" class="tab-content active">
+            <h2>Adicionar Item</h2>
+            
+            <!-- Seção de Nome e Ano -->
+            <label for="nome-carro">Nome e Ano do Carro</label>
+            <input type="text" id="nome-carro" placeholder="Nome do Carro e Ano">
+            
+            <!-- Seção de Valor -->
+            <label for="valor-carro">Valor</label>
+            <input type="text" id="valor-carro" placeholder="Valor do Carro">
+            
+            <!-- Botão para Adicionar o Carro -->
+            <button id="add-car">Adicionar</button>
+        </section>
+        
 
-            <div class="editar">
-                editar
-            </div>
+        <section id="view" class="tab-content">
+            <h2>Visualizar Itens</h2>
+            <label for="search-car">Pesquise um Carro</label>
+            <input type="text" id="search-car" placeholder="Pesquise Aqui">
+            <div id="car-list"></div>
+        </section>
 
-            <div class="deletar">
-                deletar
-            </div>
-        </div>
+        <section id="edit" class="tab-content">
+            <h2>Editar Item</h2>
+            <label for="edit-id">ID do Carro</label>
+            <input type="text" id="edit-id" placeholder="ID do Carro">
+            <label for="edit-nome">Alterar Nome e Ano</label>
+            <input type="text" id="edit-nome" placeholder="Novo Nome e Ano">
+            <label for="edit-valor">Alterar Valor</label>
+            <input type="text" id="edit-valor" placeholder="Novo Valor">
+            <button id="edit-car">Salvar Alterações</button>
+        </section>
 
+        <section id="delete" class="tab-content">
+            <h2>Deletar Item</h2>
+            <label for="delete-id">ID do Carro</label>
+            <input type="text" id="delete-id" placeholder="ID do Carro">
+            <button id="delete-car">Deletar</button>
+        </section>
     </main>
 
-    <script src="header2.js"></script>
+    <script src="admin.js"></script>
     <script src="footer2.js"></script>
+    <script src="header2.js"></script>
+
 </body>
 
 </html>
