@@ -1,0 +1,39 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 700px;
+}
+
+/*.section-top*/
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .section-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carrossel {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .black {
+        width: 100%;
+    }
+}

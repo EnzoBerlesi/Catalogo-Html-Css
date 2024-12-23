@@ -26,7 +26,7 @@ function createFooter() {
                 <h1>Redes Sociais</h1>
                 <div>
                     <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwin8firxqKKAxVPr5UCHepGG28QFnoECBgQAQ&url=https%3A%2F%2Fwww.facebook.com%2FBancoNacionalDeEmpregos%2F%3Flocale%3Dpt_BR&usg=AOvVaw3rMKgob3nRzNZ557qtVyPT&opi=89978449"><img src="icones/facebook.png" class="social-icon" /></a>
-                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiK3JOayKKKAxXSHLkGHZUgDgMQFnoECCAQAQ&url=https%3A%2F%2Fwww.instagram.com%2Fbneempregos%2F&usg=AOvVaw3cpcGuvjZDCVy5PWmj0sXC&opi=89978449" class="social-icon" /></a>
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiK3JOayKKKAxXSHLkGHZUgDgMQFnoECCAQAQ&url=https%3A%2F%2Fwww.instagram.com%2Fbneempregos%2F&usg=AOvVaw3cpcGuvjZDCVy5PWmj0sXC&opi=89978449" class="social-icon" /><img src="icones/instagram.png" class="social-icon" /></a>
                     <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjNhfblyKKKAxWsELkGHaFtOQwQFnoECBYQAQ&url=https%3A%2F%2Ftwitter.com%2Fbneempregos&usg=AOvVaw3kveaaFaqdXZGVIJOOuXGc&opi=89978449"><img src="icones/twitter.png" class="social-icon" /></a>
                 </div>
             </div>
