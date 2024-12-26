@@ -19,16 +19,12 @@
 
         <section id="add" class="tab-content active">
             <h2>Adicionar Item</h2>
-            
-            <!-- Seção de Nome e Ano -->
+            <label for="id-carro">ID do Carro</label>
+            <input type="text" id="id-carro" placeholder="ID do Carro">
             <label for="nome-carro">Nome e Ano do Carro</label>
             <input type="text" id="nome-carro" placeholder="Nome do Carro e Ano">
-            
-            <!-- Seção de Valor -->
             <label for="valor-carro">Valor</label>
             <input type="text" id="valor-carro" placeholder="Valor do Carro">
-            
-            <!-- Botão para Adicionar o Carro -->
             <button id="add-car">Adicionar</button>
         </section>
         
@@ -42,25 +38,30 @@
 
         <section id="edit" class="tab-content">
             <h2>Editar Item</h2>
-            <label for="edit-id">ID do Carro</label>
+            <label for="edit-id">ID do Carro (não editável)</label>
             <input type="text" id="edit-id" placeholder="ID do Carro">
-            <label for="edit-nome">Alterar Nome e Ano</label>
-            <input type="text" id="edit-nome" placeholder="Novo Nome e Ano">
+            
+            <label for="edit-nome">Alterar Nome</label>
+            <input type="text" id="edit-nome" placeholder="Novo Nome">
+            
             <label for="edit-valor">Alterar Valor</label>
             <input type="text" id="edit-valor" placeholder="Novo Valor">
+            
             <button id="edit-car">Salvar Alterações</button>
         </section>
+        
 
         <section id="delete" class="tab-content">
             <h2>Deletar Item</h2>
             <label for="delete-id">ID do Carro</label>
-            <input type="text" id="delete-id" placeholder="ID do Carro">
+            <input type="text" id="delete-id" placeholder="ID do Carro (Opcional)">
+            <label for="delete-nome">Nome do Carro</label>
+            <input type="text" id="delete-nome" placeholder="Nome do Carro (Opcional)">
             <button id="delete-car">Deletar</button>
         </section>
     </main>
 
     <script src="admin.js"></script>
-    <script src="footer2.js"></script>
     <script src="header2.js"></script>
 
 </body>
