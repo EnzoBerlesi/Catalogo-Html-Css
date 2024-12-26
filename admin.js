@@ -1,27 +1,23 @@
-// Lógica para alternar entre abas
 document.addEventListener("DOMContentLoaded", () => {
     const tabButtons = document.querySelectorAll(".tab-button");
     const tabContents = document.querySelectorAll(".tab-content");
 
     tabButtons.forEach(button => {
         button.addEventListener("click", () => {
-            // Remove a classe 'active' de todas as abas e botões
             tabButtons.forEach(btn => btn.classList.remove("active"));
             tabContents.forEach(content => {
                 content.classList.remove("active");
-                content.style.display = "none"; // Ocultar as seções
+                content.style.display = "none";
             });
 
-            // Adiciona a classe 'active' para o botão e seção selecionados
             button.classList.add("active");
             const tabId = button.getAttribute("data-tab");
             const activeContent = document.getElementById(tabId);
             activeContent.classList.add("active");
-            activeContent.style.display = "block"; // Mostrar a seção selecionada
+            activeContent.style.display = "block";
         });
     });
 
-    // Mostra a primeira aba por padrão ao carregar a página
     const firstTab = document.querySelector(".tab-button.active");
     if (firstTab) {
         const tabId = firstTab.getAttribute("data-tab");
@@ -31,30 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
 
-
-
-
-    // Elementos de Adicionar
     const idInput = document.querySelector("#id-carro");
     const nomeInput = document.querySelector("#nome-carro");
     const valorInput = document.querySelector("#valor-carro");
     const addCarButton = document.querySelector("#add-car");
 
-    // Elementos de Deletar
     const deleteIdInput = document.querySelector("#delete-id");
     const deleteNomeInput = document.querySelector("#delete-nome");
     const deleteCarButton = document.querySelector("#delete-car");
 
-    // Lista de Carros
     const carList = document.querySelector("#car-list");
 
-    // Função para carregar carros
     function carregarCarros() {
         const carros = JSON.parse(localStorage.getItem("adminCarros")) || [];
         carList.innerHTML = carros
@@ -69,10 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .join("");
     }
 
-    // Carregar carros na inicialização
     carregarCarros();
 
-    // Adicionar Carro
     addCarButton.addEventListener("click", () => {
         const id = idInput.value.trim();
         const nome = nomeInput.value.trim();
@@ -85,13 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const carros = JSON.parse(localStorage.getItem("adminCarros")) || [];
 
-        // Verificar se o ID já existe
         if (carros.some((carro) => carro.id === id)) {
             alert("Já existe um carro com este ID.");
             return;
         }
 
-        // Adicionar carro
         const novoCarro = { id, nome, valor };
         carros.push(novoCarro);
         localStorage.setItem("adminCarros", JSON.stringify(carros));
@@ -142,7 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const editValorInput = document.getElementById("edit-valor");
     const editCarButton = document.getElementById("edit-car");
 
-    // Detecta mudanças no campo de ID e carrega os dados automaticamente
     editIdInput.addEventListener("input", () => {
         const id = editIdInput.value.trim();
         if (!id) {
@@ -151,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Obter a lista de carros do localStorage
         const carros = JSON.parse(localStorage.getItem("adminCarros")) || [];
         const carro = carros.find(carro => carro.id === id);
 
@@ -161,52 +140,42 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Preenche os campos com os dados do carro encontrado
         editNomeInput.value = carro.nome;
         editValorInput.value = carro.valor;
     });
 
-    // Lógica de edição do carro
-
-    editCarButton.addEventListener("click"), () => {
-        // Obtendo os valores inseridos
+    editCarButton.addEventListener("click", () => {
         const id = editIdInput.value.trim();
         const nome = editNomeInput.value.trim();
         const valor = editValorInput.value.trim();
-    }
     
-    // Verificar se todos os campos estão preenchidos
-    if (!id || !nome || !valor) {
-        alert("Por favor, preencha todos os campos.");
-        return;
-    }
-
-    // Obter a lista de carros do localStorage
-    let carros = JSON.parse(localStorage.getItem("adminCarros"));
-
-    // Verifica se o ID existe
-    const carroIndex = carros.findIndex(carro => carro.id === id);
-
-    if (carroIndex === -1) {
-        alert("Carro não encontrado.");
-        return;
-    }
-
-    // Atualizar os dados do carro
-    carros[carroIndex].nome = nome;
-    carros[carroIndex].valor = valor;
-
-    // Salvar as alterações no localStorage
-    localStorage.setItem("adminCarros", JSON.stringify(carros));
-
-    alert("Carro editado com sucesso!");
-    // Atualizar a lista de carros na aba "Visualizar"
-    carregarCarros();
-
-    // Resetar os campos
-    editIdInput.value = "";
-    editNomeInput.value = "";
-    editValorInput.value = "";
-
+        if (!id || !nome || !valor) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+    
+        let carros = JSON.parse(localStorage.getItem("adminCarros")) || [];
+    
+        const carroIndex = carros.findIndex(carro => carro.id === id);
+    
+        if (carroIndex === -1) {
+            alert("Carro não encontrado.");
+            return;
+        }
+    
+        carros[carroIndex].nome = nome;
+        carros[carroIndex].valor = valor;
+    
+        localStorage.setItem("adminCarros", JSON.stringify(carros));
+    
+        alert("Carro editado com sucesso!");
+    
+        carregarCarros();
+    
+        editIdInput.value = "";
+        editNomeInput.value = "";
+        editValorInput.value = "";
+    });
+    
 
 });
